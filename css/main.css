@@ -1,0 +1,46 @@
+body {
+	text-align: center;
+}
+
+.subtask{
+	display: none;
+}
+
+.question{
+	text-align: left;
+	float: left;
+	width: 45%;
+	padding: 20px;
+}
+
+.next{
+	background: white;
+	border: 1px solid black;
+	font-size: 1.3rem;
+	padding: 10px;
+	margin: 20px 40px;
+}
+
+.choice{
+	clear: both;
+}
+
+.nextTask{
+	background: white;
+	border: 1px solid black;
+	font-size: 1.3rem;
+	padding: 10px;
+	margin: 20px 40px;
+}
+
+.next:hover{
+	border: 1px solid #60d67d;
+	color: #60d67d;
+	cursor: pointer;
+}
+
+.nextTask:hover{
+	border: 1px solid #60d67d;
+	color: #60d67d;
+	cursor: pointer;
+}

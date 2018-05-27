@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="../js/db.js"></script>
+	<script type="text/javascript">
+	var user_id;
+	var myList;
+	var answer = {};
+	function setUserId(){
+		user_id = document.getElementById('userNumber').value;
+		console.log(user_id);
+	}
+	function setAnswer(qId, option){
+		answer[qId] = option;
+		console.log(answer);
+	}
+	function sendAnswer(qId, option){
+		answer[qId] = option;
+		console.log(answer);
+		firebase.database().ref('user/'+user_id).update(answer);
+		$(this).parent().hide(); 
+	}
+	$(document).ready(function(){
+		user_id = prompt("Please enter user number", 0);
+		if (user_id != null) {
+		    document.getElementById("userNumber").value =
+		    user_id;
+		    firebase.database().ref('user/'+user_id).update({id: user_id});
+		}
+     $('.subtask').eq(0).show();
+		$('body').on('click','.next',function() {
+			console.log("yo");
+			// $(this).parent().parent().hide();
+
+			var nextOne=$(this).parent().parent().index();
+			console.log(nextOne);
+			$('.subtask').eq(nextOne).show();
+		});
+	});
+	</script>
+</head>
+<body>
+	<input id="userNumber" type="text" name="user">
+	<button onclick="setUserId()">Set UserId</button>
+	<div class="task">
+		<h3>Task 1</h3>
+		<div class="subtask">
+			<div class="question">
+				<h3>(A) 皮皮諾百貨商城 (Decision)</h3>
+				<ul>
+					<li>規模：南台灣數一數二的大規模購物商城</li>
+					<li>商品樣式：眾多商家與席位，各式精品的專賣店</li>
+					<li>其餘設備：高畫質電影館、娛樂中心、各地特色食物的美食街</li>
+					<li>戶外活動：戶外的花園區定期舉辦音樂演奏與街頭表演</li>
+				</ul>
+			</div>
+			<div class="question">
+				<h3>(B) 皮諾諾購物中心 (Decision)</h3>
+				<ul>
+					<li>規模：高雄最大的休閒購物園區</li>
+					<li>商品樣式：70家不同商品的店鋪與精品專賣店</li>
+					<li>其餘設備：3D映像的電影院和娛樂中心、以及台灣小吃的美食街</li>
+					<li>戶外活動：戶外的展演空間每天舉行現場音樂演奏與街頭表演等</li>
+				</ul>
+			</div>
+			<div class="choice">
+				<button class="next" onclick="sendAnswer('1A','a')">Choose A</button>
+				<button class="next" onclick="sendAnswer('1A','b')">Choose B</button>
+			</div>
+		</div>
+		<div class="subtask">
+			<div class="question">
+				<p>近期開幕的皮皮諾百貨商城，建在曾為軍事基地的廣大區域上，是南台灣數一數二的大規模購物商城。擁有眾多商家與席位，各式精品的專賣店，百大的國際級領導品牌提供超值優惠商品與寬敞愉悅的購物環境。皮皮諾百貨商城另備有娛樂中心讓消費者享有美好的體驗。而戶外的展演空間也定期舉辦演奏與表演等，氣氛熱鬧非凡！此外，皮皮諾百貨商城在一些特殊節日中亦會舉行多種活動，深受消費者喜愛。良好的購物環境及多樣的活動使皮皮諾百貨商城逐漸成為南臺灣流行的購物地點。
+				</p>
+			</div>
+			<div class="question">
+				<p> 2017年開幕的皮諾諾購物中心，地處於曾為美軍的高爾夫球場、超過15萬平方公尺的廣闊空間，是北高雄最大的休閒購物園區。匯集約100家不同商品的店鋪與精品專賣店。商城內另備有娛樂中心（舉凡以3D映像為主體的電影院、豐富有趣的主題兒童遊樂區以及融合世界各地特色小吃的美食街）讓消費者享有美好的時尚體驗。戶外的美式露天花園區每天舉行現場爵士音樂、流行音樂演奏與街頭表演等，提供給消費者更多樣的享受。此外，皮皮諾百貨商城在一些特殊節日中亦會舉行多種活動，如在聖誕節設置巨型聖誕樹及西方耶誕市集，在農曆年前中後推出新春福袋等活動等等，均深受消費者喜愛！寬敞舒適的購物環境及多樣的活動使皮皮諾百貨商城逐漸成為南臺灣最流行時尚的一大購物地點。期待您的蒞臨！
+				</p>
+			</div>
+			<div class="choice">
+				<button class="nextTask" onclick="sendAnswer('1B','a')">Choose A</button>
+				<button class="nextTask" onclick="sendAnswer('1B','b')">Choose B</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
