@@ -36,11 +36,14 @@
      $('.subtask').eq(0).show();
 		$('body').on('click','.next',function() {
 			console.log("yo");
-			// $(this).parent().parent().hide();
+			$(this).parent().hide();
 
 			var nextOne=$(this).parent().parent().index();
 			console.log(nextOne);
 			$('.subtask').eq(nextOne).show();
+		});
+		$('body').on('click','.nextTask',function() {
+			console.log("next task");
 		});
 	});
 	</script>
