@@ -1,9 +1,11 @@
 body {
 	text-align: center;
+	font-family: 'Arimo', sans-serif;
+	padding: 20px;
 }
 
 .subtask{
-	display: none;
+
 }
 
 .question{
@@ -13,34 +15,30 @@ body {
 	padding: 20px;
 }
 
-.next{
-	background: white;
-	border: 1px solid black;
-	font-size: 1.3rem;
-	padding: 10px;
-	margin: 20px 40px;
-}
-
 .choice{
 	clear: both;
+	font-size: 1.3rem;
 }
 
-.nextTask{
+#firstChoice{
+	color: #60d67d;
+}
+
+.choice_btn{
+	text-align: center;
 	background: white;
-	border: 1px solid black;
+	color: #60d67d;
+	border: 1px solid #60d67d;
 	font-size: 1.3rem;
 	padding: 10px;
 	margin: 20px 40px;
+	width: 100px;
 }
 
-.next:hover{
+.choice_btn:hover{
 	border: 1px solid #60d67d;
-	color: #60d67d;
+	color: white;
+	background: #60d67d;
 	cursor: pointer;
-}
-
-.nextTask:hover{
-	border: 1px solid #60d67d;
-	color: #60d67d;
-	cursor: pointer;
+	transition: 0.5s;
 }
