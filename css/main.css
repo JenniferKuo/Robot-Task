@@ -42,3 +42,8 @@ body {
 	cursor: pointer;
 	transition: 0.5s;
 }
+
+.robot_img{
+	width: 300px;
+	margin: 50px;
+}
