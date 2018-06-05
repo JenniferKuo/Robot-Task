@@ -1,18 +1,24 @@
 body {
 	text-align: center;
 	font-family: 'Arimo', sans-serif;
-	padding: 20px;
 }
 
 .subtask{
-
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .question{
 	text-align: left;
 	float: left;
-	width: 45%;
+	width: 40vw;
 	padding: 20px;
+	margin: 0px 0px 0px 2.5vw;
+	border: 2px solid #cccccc;
+}
+
+li{
+	line-height: 40px;
+	word-spacing: 10px;
 }
 
 .choice{
