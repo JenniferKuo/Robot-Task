@@ -12,12 +12,13 @@ body {
 	float: left;
 	width: 40vw;
 	padding: 20px;
-	margin: 0px 0px 0px 2.5vw;
+	margin: 2.5vw;
 	border: 2px solid #cccccc;
+	height: 40vh;
 }
 
 li{
-	line-height: 40px;
+	line-height: 30px;
 	word-spacing: 10px;
 }
 

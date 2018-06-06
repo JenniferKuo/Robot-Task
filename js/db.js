@@ -12,6 +12,7 @@
 
 		// Builds the HTML Table out of myList.
 		function buildHtmlTable(selector) {
+			$(selector).html('');
 		  var columns = addAllColumnHeaders(myList, selector);
 
 		  for (var i = 0; i < myList.length; i++) {
