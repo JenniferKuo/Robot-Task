@@ -56,6 +56,16 @@
 			$('.task').fadeIn(500);
 			$('.info').hide();
 		});
+		$('body').on('click','.btn1',function() {
+			$(this).hide();
+			$('.robot1').attr('src', "image/robota.gif");
+			$('.robot2').attr('src', "image/robot2.png");
+		});
+		$('body').on('click','.btn2',function() {
+			$(this).hide();
+			$('.robot1').attr('src', "image/robot1.png");
+			$('.robot2').attr('src', "image/robotb.gif");
+		});
 		$('body').on('click','.next',function() {
 			$('.choice1').hide();
 			$('.subtask2').fadeIn(500);
@@ -104,9 +114,10 @@
 	</script>
 </head>
 <body>
-	
-	<input id="userNumber" type="text" name="user">
-	<button onclick="setUserId()">Set UserId</button>
+	<div style="visibility: hidden">
+		<input id="userNumber" type="text" name="user">
+		<button onclick="setUserId()">Set UserId</button>
+	</div>
 	<div class="info"></div>
 	<div class="task">
 		<h1 class="taskTitle">旅遊規劃</h1>
@@ -124,8 +135,10 @@
 		<div class="subtask subtask2">
 			<div class="choice">Initial Choice: <span id="firstChoice"></span></div>
 			<div class="robot">
-				<img src="image/robot1.gif" class="robot_img" />
-				<img src="image/robot2.gif" class="robot_img"/>
+				<img src="image/play-btn.png" class="playbtn btn1"/>
+				<img src="image/play-btn.png" class="playbtn btn2"/>
+				<img src="image/robot1.png" class="robot_img robot1" />
+				<img src="image/robot2.png" class="robot_img robot2"/>
 			</div>
 			<div class="choice">
 				<button class="nextTask choice_btn" value="A">A</button>

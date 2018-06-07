@@ -53,3 +53,24 @@ li{
 	width: 300px;
 	margin: 50px;
 }
+
+.robot{
+	position: relative;
+}
+
+.playbtn{
+	position: absolute;
+	top: 180px;
+}
+
+.playbtn:hover{
+	cursor: pointer;
+}
+
+.btn1{
+	left:27%;
+}
+
+.btn2{
+	right:30%;
+}
