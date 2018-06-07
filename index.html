@@ -58,11 +58,13 @@
 		});
 		$('body').on('click','.btn1',function() {
 			$(this).hide();
+			$('.btn2').show();
 			$('.robot1').attr('src', "image/robota.gif");
 			$('.robot2').attr('src', "image/robot2.png");
 		});
 		$('body').on('click','.btn2',function() {
 			$(this).hide();
+			$('.btn1').show();
 			$('.robot1').attr('src', "image/robot1.png");
 			$('.robot2').attr('src', "image/robotb.gif");
 		});
@@ -79,6 +81,9 @@
 			$('.subtask1').hide();
 			$('.subtask1').fadeIn(400);
 			$('.choice1').fadeIn(400);
+			$('.playbtn').show();
+			$('.robot1').attr('src', "image/robot1.png");
+			$('.robot2').attr('src', "image/robot2.png");
 			console.log("taskId = " + taskId);
 			if(taskId < 8){
 				taskId++;
