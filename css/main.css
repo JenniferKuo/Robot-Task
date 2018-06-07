@@ -14,7 +14,6 @@ body {
 	padding: 20px;
 	margin: 2.5vw;
 	border: 2px solid #cccccc;
-	height: 40vh;
 }
 
 li{
@@ -39,7 +38,7 @@ li{
 	font-size: 1.3rem;
 	padding: 10px;
 	margin: 20px 40px;
-	width: 100px;
+	width: 130px;
 }
 
 .choice_btn:hover{
