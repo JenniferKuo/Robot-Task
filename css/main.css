@@ -50,8 +50,8 @@ li{
 }
 
 .robot_img{
-	width: 300px;
-	margin: 50px;
+	width: 30%;
+	margin: 5%;
 }
 
 .robot{
@@ -60,7 +60,8 @@ li{
 
 .playbtn{
 	position: absolute;
-	top: 180px;
+	top: 20vw;
+	width: 10%;
 }
 
 .playbtn:hover{
@@ -68,9 +69,9 @@ li{
 }
 
 .btn1{
-	left:27%;
+	left:24%;
 }
 
 .btn2{
-	right:30%;
+	right:26%;
 }
