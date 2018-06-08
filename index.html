@@ -61,12 +61,20 @@
 			$('.btn2').show();
 			$('.robot1').attr('src', "image/robota.gif");
 			$('.robot2').attr('src', "image/robot2.png");
+			setTimeout(function(){
+				$('.btn1').show();
+				$('.robot1').attr('src', "image/robot1.png");
+			},20000); 
 		});
 		$('body').on('click','.btn2',function() {
 			$(this).hide();
 			$('.btn1').show();
 			$('.robot1').attr('src', "image/robot1.png");
 			$('.robot2').attr('src', "image/robotb.gif");
+			setTimeout(function(){
+				$('.btn2').show();
+				$('.robot2').attr('src', "image/robot2.png");
+			},20000);
 		});
 		$('body').on('click','.next',function() {
 			$('.choice1').hide();
