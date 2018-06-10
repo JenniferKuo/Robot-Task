@@ -14,13 +14,14 @@
 		userRef.on('value', function(snapshot) {
 			myList = snapshot.val();
 			console.log("目前所有使用者：",snapshot.val());
+			$('#result').html(JSON.stringify(snapshot));
 			// buildHtmlTable('#excelDataTable');
 		});
 	</script>
 </head>
 <body>
 	<!-- <table id="excelDataTable" border="1"> -->
-	<h3>即時資料請看console結果</h3>
-	<p id="result"></p>
+	<h3>更好閱讀版本可以看檢查console</h3>
+	<div id="result"></div>
 </body>
 </html>

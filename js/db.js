@@ -19,7 +19,7 @@
 		    var row$ = $('<tr/>');
 		    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
 		      var cellValue = myList[i][columns[colIndex]];
-		      if (cellValue == null) cellValue = "";
+		      // if (cellValue == null) cellValue = "";
 		      row$.append($('<td/>').html(cellValue));
 		    }
 		    $(selector).append(row$);
