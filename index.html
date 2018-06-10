@@ -81,6 +81,9 @@
 			$('.subtask2').fadeIn(500);
 			$('#firstChoice').text(this.value);
 			setAnswer(taskId+1+'A', this.value);
+			$('html, body').animate({
+		        scrollTop: $("#firstChoice").offset().top
+		    }, 500);
 		});
 		$('body').on('click','.nextTask',function() {
 			setAnswer(taskId+1+'B', this.value);
