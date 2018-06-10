@@ -78,6 +78,7 @@
 		});
 		$('body').on('click','.next',function() {
 			$('.choice1').hide();
+			$('.subtask1').hide();
 			$('.subtask2').fadeIn(500);
 			$('#firstChoice').text(this.value);
 			setAnswer(taskId+1+'A', this.value);
@@ -89,7 +90,6 @@
 			setAnswer(taskId+1+'B', this.value);
 			sendAnswer();
 			$('.subtask2').hide();
-			$('.subtask1').hide();
 			$('.subtask1').fadeIn(400);
 			$('.choice1').fadeIn(400);
 			$('.playbtn').show();
