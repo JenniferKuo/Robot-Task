@@ -30,8 +30,17 @@
 
 	var travelInfo = '<h2>旅遊規劃</h2><p>接下來有四個問題，是關於<b>旅遊方案</b>的選擇，答案沒有對錯。請從A跟B選項中選出你認為最適合的方案。</p><button class="choice_btn startTask">開始作答</button></div>';
 	var fundingInfo = '<h2>募資方案選擇</h2><p>接下來有四個問題，是關於<b>募資方案</b>的選擇，答案沒有對錯。請從A跟B選項中選出你認為最適合的方案。</p><button class="choice_btn startTask">開始作答</button></div>';
+	var test1Info = '<h2>已完成第一部分的作答，請通知實驗人員再進行下一步驟。</h2><a href="#" style="display:block;">問卷連結</a><button class="choice_btn" onclick="changeInfo(fundingInfo)">下一步</button>';
+	var test2Info = '<h2>已完成第二部分的作答，請通知實驗人員再進行下一步驟。</h2><a href="#" style="display:block;">問卷連結</a><button class="choice_btn" onclick="endTest()");">下一步</button>';
+	var endInfo = '<h2>實驗結束！感謝您的填寫。</h2>';
 
 	var taskId = 0;
+	function changeInfo(info){
+		$('.info').html(info);
+	}
+	function endTest(){
+		$("body").html(endInfo);
+	}
 	function setUserId(){
 		user_id = document.getElementById('userNumber').value;
 		console.log(user_id);
@@ -99,7 +108,7 @@
 			if(taskId < 8){
 				taskId++;
 				if(taskId == 8){
-					$('body').html('<h1>實驗結束！感謝您的填寫</h1>');
+					$('body').html(test2Info);
 				}
 				else{
 					$('.question1').html(questionList[taskId][0]);
@@ -109,7 +118,7 @@
 					$('#progress').attr('src', imgList[taskId]);
 				}
 				if(taskId == 4){
-					$('.info').html(fundingInfo);
+					$('.info').html(test1Info);
 					$('.info').fadeIn();
 					$('.task').hide();
 					$('.subtask2').hide();
