@@ -91,6 +91,7 @@
 			$('.subtask2').fadeIn(500);
 			$('#firstChoice').text(this.value);
 			setAnswer(taskId+1+'A', this.value);
+			sendAnswer();
 			$('html, body').animate({
 		        scrollTop: $("#firstChoice").offset().top
 		    }, 500);
